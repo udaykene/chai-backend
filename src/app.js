@@ -15,4 +15,14 @@ app.use(express.urlencoded({extended:true})) // this defines the data coming fro
 app.use(express.static('public')) // this helps in defining the public folder where all static files can be stored
 app.use(cookieparser()) // This helps in parsing cookies 
 
+
+
+// routes
+import userRoute from './routes/user.routes.js'
+
+
+
+app.use('/api/v1/users',userRoute)
+
+
 export {app}
